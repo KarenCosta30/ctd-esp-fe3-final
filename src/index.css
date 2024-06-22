@@ -76,9 +76,7 @@ form{
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
+  padding: 0.5rem 0.5rem 0 0.5rem;}
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
@@ -119,4 +117,42 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.card-dark{
+  color: white;
+  background-color: #000;
+  border: 2px solid white;
+  font-weight: bold;
+  
+}
+
+
+.card-light{
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.letter-dark{
+  color: white;
+  font-weight: bold;
+
+}
+
+.letter-light{
+  color: black;
+  font-weight: bold;
+
 }

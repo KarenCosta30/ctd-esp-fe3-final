@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Components/Card";
+import { useManyStates } from "../Context/Context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+let favsStorage =   JSON.parse(localStorage.getItem("favs"))
+
 
 const Favs = () => {
+  const { state } = useManyStates();
+  const randomNum = Math.random();
 
+  console.log("favs sto " + favsStorage );
+ 
   return (
     <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
+      <div className={`${ "card-grid "+ state.theme }`}>
+        <p className={`${ "letter-"+ state.theme }`}>Dentistas favoritos</p>
+         {favsStorage.map(user => (
+          <Card key={user.id} user={user} />
+        ))}
       </div>
     </>
   );
